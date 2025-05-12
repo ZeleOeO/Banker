@@ -33,6 +33,8 @@ class ElizadeMFBTest {
         assertEquals(1, customers.size());
         assertEquals("John Doe", customers.get(0).getName());
         assertEquals(bank, customers.get(0).getBank());
+        assertEquals("Elizade MFB", bank.getCustomers().get(0).getBank().getName());
+        assertEquals("Elizade MFB", bank.getAccounts().get(0).getBank().getName());
     }
 
     @Test
