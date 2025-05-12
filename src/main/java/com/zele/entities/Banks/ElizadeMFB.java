@@ -2,20 +2,22 @@ package com.zele.entities.Banks;
 
 import com.zele.entities.*;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
 public class ElizadeMFB implements Bank {
-    List<Customer> customers;
-    List<Account> accounts;
-    List<Transaction> transactionHistory;
+    private String name = "Elizade MFB";
+    List<Customer> customers = new ArrayList<Customer>();
+    List<String> accounts = new ArrayList<String>();
+    List<Transaction> transactionHistory = new ArrayList<Transaction>();
     @Override
     public List<Customer> getCustomers() {
         return customers;
     }
 
     @Override
-    public List<Account> getAccounts() {
+    public List<String> getAccounts() {
         return accounts;
     }
 
