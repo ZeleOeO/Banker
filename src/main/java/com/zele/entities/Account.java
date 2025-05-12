@@ -36,6 +36,10 @@ public class Account {
         this.withdraw(amount+bankCharges);
         to.deposit(amount);
         Transaction transaction= new Transaction(this, to, amount+bankCharges);
+        this.owner.getTransactionHistory().add(transaction);
+        to.owner.getTransactionHistory().add(transaction);
+        this.bank.getTransactions().add(transaction);
+        to.bank.getTransactions().add(transaction);
         return transaction;
     }
 

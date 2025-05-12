@@ -1,7 +1,9 @@
 package com.zele.entities;
 
+import java.util.List;
+
 public class Customer extends User {
-    Account account;
+    List<Account> accounts;
     List<Transaction> transactionHistory;
 
     public Customer(String name) {
@@ -9,8 +11,16 @@ public class Customer extends User {
     }
 
     public Account createAccount(String accountType) {
-       account = new Account(accountType);
-       return account;
+        Account account = new Account(accountType);
+        this.accounts.add(account);
+        return account;
     }
 
+    public List<Account> getAccounts() {
+        return accounts;
+    }
+
+    public List<Transaction> getTransactionHistory() {
+        return transactionHistory;
+    }
 }

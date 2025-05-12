@@ -1,8 +1,9 @@
 package com.zele.entities;
 
+import java.util.Random;
+
 public class User {
-    int id;
-    String name;
+    private String name;
 
-
+    public User(String name) {this.name = name;}
 }
