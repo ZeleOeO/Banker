@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Customer extends User {
-    private List<Account> accounts = new ArrayList<Account>();
+    private Account account;
     private List<Transaction> transactionHistory = new ArrayList<Transaction>();
     private Bank bank;
 
@@ -16,13 +16,12 @@ public class Customer extends User {
         Account account = new Account(accountType);
         account.setBank(bank);
         account.setOwner(this);
-        this.accounts.add(account);
         this.getBank().getAccounts().add(account.getAccountNumber().toString());
         return account;
     }
 
-    public List<Account> getAccounts() {
-        return accounts;
+    public Account getAccount() {
+        return account;
     }
 
     public List<Transaction> getTransactionHistory() {
