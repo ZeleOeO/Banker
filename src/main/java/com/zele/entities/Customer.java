@@ -2,6 +2,7 @@ package com.zele.entities;
 
 public class Customer extends User {
     Account account;
+    List<Transaction> transactionHistory;
 
     public Customer(String name) {
         super(name);
