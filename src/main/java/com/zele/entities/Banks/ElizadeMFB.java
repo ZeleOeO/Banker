@@ -23,4 +23,17 @@ public class ElizadeMFB implements Bank {
     public List<Transaction> getTransactions() {
        return transactionHistory;
     }
+
+    @Override
+    public Customer createCustomer(String name) {
+       Customer customer = new Customer(name);
+       customer.setBank(this);
+       customers.add(customer);
+       return customer;
+    }
+
+    @Override
+    public String getName() {
+        return this.name;
+    }
 }
