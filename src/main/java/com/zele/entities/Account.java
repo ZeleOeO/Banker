@@ -13,10 +13,10 @@ public class Account {
     private Bank bank;
     private Customer owner;
 
-    public Account(String accountType) {
+    public Account(AccountType accountType) {
         this.created = LocalDateTime.now();
         this.accountNumber = AccountNumberGenerator.generateAccountNumber();
-        this.accountType = AccountType.valueOf(accountType);
+        this.accountType = accountType;
         this.balance = 0.0;
     }
 

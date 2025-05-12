@@ -5,7 +5,8 @@ import java.util.List;
 
 public interface Bank {
     List<Customer> getCustomers();
-    List<Account> getAccounts();
+    List<String> getAccounts();
     List<Transaction> getTransactions();
-
+    Customer createCustomer(String name);
+    String getName();
 }
