@@ -9,4 +9,5 @@ public interface Bank {
     List<Transaction> getTransactions();
     Customer createCustomer(String name);
     String getName();
+    Long landingMenu();
 }

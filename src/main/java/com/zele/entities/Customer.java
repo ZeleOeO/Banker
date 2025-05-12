@@ -17,6 +17,7 @@ public class Customer extends User {
         account.setBank(bank);
         account.setOwner(this);
         this.getBank().getAccounts().add(account.getAccountNumber().toString());
+        this.account = account;
         return account;
     }
 
