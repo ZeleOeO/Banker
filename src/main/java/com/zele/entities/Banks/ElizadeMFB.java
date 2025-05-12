@@ -1,6 +1,8 @@
 package com.zele.entities.Banks;
 
-import com.zele.entities.*;
+import com.zele.entities.Bank;
+import com.zele.entities.Customer;
+import com.zele.entities.Transaction;
 
 import java.util.ArrayList;
 import java.util.List;
