@@ -1,7 +1,7 @@
 package com.zele.entities;
 
 import com.zele.entities.Banks.ElizadeMFB;
-import com.zele.exceptions.BalanceIsInsufficient;
+import com.zele.exceptions.BalanceIsInsufficientException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -83,7 +83,7 @@ class AccountTest {
 
     @Test
     void testTransferInsufficientBalance() {
-        Exception exception = assertThrows(BalanceIsInsufficient.class, () -> {
+        Exception exception = assertThrows(BalanceIsInsufficientException.class, () -> {
             accountA.transfer(2000.0, accountB);
         });
         assertEquals("Insufficient balance", exception.getMessage());

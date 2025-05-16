@@ -1,6 +1,6 @@
 package com.zele.entities;
 
-import com.zele.exceptions.BalanceIsInsufficient;
+import com.zele.exceptions.BalanceIsInsufficientException;
 import com.zele.tools.AccountNumberGenerator;
 
 import java.time.LocalDateTime;
@@ -29,7 +29,7 @@ public class Account {
 
     public Transaction transfer(Double amount, Account to) {
         double bankCharges = 0.0;
-        if (amount > this.balance) {throw new BalanceIsInsufficient("Insufficient balance");}
+        if (amount > this.balance) {throw new BalanceIsInsufficientException("Insufficient balance");}
         if (to.getBank() != this.bank) {
            bankCharges=20.0;
         }
